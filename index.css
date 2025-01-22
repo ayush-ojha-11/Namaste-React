@@ -5,10 +5,9 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
 }
 .logo {
-  width: 150px;
+  width: 120px;
 }
 
 .nav-items {
@@ -17,7 +16,7 @@
 
 .nav-items > ul {
   display: flex;
-  font-size: 24px;
+  font-size: 20px;
   list-style-type: none;
 }
 
@@ -35,6 +34,7 @@
 }
 .res-card {
   background-color: #f0f0f0;
+
   margin: 5px;
   padding: 5px;
   width: 200px;
@@ -68,4 +68,11 @@
 }
 .filter {
   display: flex;
+}
+.link {
+  color: #000;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
 }
