@@ -31,20 +31,26 @@
 .res-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-self: stretch;
+  width: auto;
+  align-items: center;
+  gap: 7px;
 }
 .res-card {
-  background-color: #f0f0f0;
-
+  background-color: #fff;
+  border-radius: 25px;
   margin: 5px;
-  padding: 5px;
-  width: 200px;
+  width: 240px;
   height: 400px;
+  box-shadow: -1px 5px 10px 5px #70707033;
 }
 .res-card:hover {
   cursor: pointer;
   border: 1px solid black;
 }
 .res-logo {
+  border-radius: 25px;
   width: 100%;
 }
 .filter-btn {
@@ -54,12 +60,17 @@
 .shimmer-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-self: stretch;
+  width: auto;
+  align-items: center;
+  gap: 7px;
 }
 .shimmer-card {
   background-color: #f0f0f0;
+  border-radius: 25px;
   margin: 5px;
-  padding: 5px;
-  width: 200px;
+  width: 240px;
   height: 400px;
 }
 .login {
@@ -75,4 +86,7 @@
 }
 .link:hover {
   text-decoration: underline;
+}
+.res-card-info-container {
+  padding: 5px;
 }
