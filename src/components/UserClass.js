@@ -12,7 +12,6 @@ class UserClass extends React.Component {
 
   render() {
     console.log(this.props.name + " render");
-
     return (
       <div className="user-card">
         <h1>Count : {this.state.count}</h1>
@@ -31,8 +30,16 @@ class UserClass extends React.Component {
       </div>
     );
   }
+
   componentDidMount() {
+    this.interval = setInterval(() => {
+      console.log("Interval");
+    }, 1000);
     console.log(this.props.name + " mount");
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 }
 

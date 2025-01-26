@@ -1,4 +1,3 @@
-import { log } from "console";
 import User from "./User";
 import UserClass from "./UserClass";
 import React from "react";
@@ -17,8 +16,6 @@ class About extends React.Component {
         <h1>Namaste-React Project 1</h1>
         <User firstName={"Ayush"} />
         <UserClass name={"First Child"} />
-        <UserClass name={"Second Child"} />
-        <UserClass name={"Third Child"} />
       </div>
     );
   }
