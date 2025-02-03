@@ -8,12 +8,6 @@ const Header = () => {
   const [menuIcon, setMenuIcon] = useState("menu-outline");
   const onlineStatus = useOnlineStatus();
 
-  function onToggleMenu() {
-    setMenuIcon(menuIcon === "menu-outline" ? "close" : "menu-outline");
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("top-[9%]");
-  }
-
   return (
     <div className="flex justify-between items-center w-[92%] mx-auto">
       <div className="">
