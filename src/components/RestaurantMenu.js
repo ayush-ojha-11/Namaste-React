@@ -10,6 +10,7 @@ const RestaurantMenu = () => {
   // using a custom hook
   const resInfo = useRestaurantMenu(resId);
 
+  const [showItems, setShowItems] = useState(false);
   const [showIndex, setShowIndex] = useState(0);
 
   if (resInfo === null) return <Shimmer />;
@@ -42,8 +43,13 @@ const RestaurantMenu = () => {
         <RestaurantCategory
           key={category?.card?.card?.categoryId}
           data={category?.card?.card}
-          showItems={index === showIndex ? true : false}
-          setShowIndex={() => setShowIndex(index)}
+          showItems={index === showIndex ? showItems : false}
+          setShowIndex={() => {
+            setShowIndex(index);
+            if (showItems === false) {
+              setShowItems(true);
+            } else setShowItems(false);
+          }}
         />
       ))}
     </div>
