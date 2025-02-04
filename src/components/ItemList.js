@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
               <span className="font-medium">{item.card.info.name}</span>
               <span className="font-semibold">
                 {" "}
-                - Rs. {item.card.info.price / 100}
+                - ₹ {item.card.info.price / 100}
               </span>
             </div>
 

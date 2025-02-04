@@ -16,7 +16,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <nav className="nav-links md:static bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+      <nav className="nav-links md:static md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
         <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 ">
           <li className="">Online status: {onlineStatus ? "🟢" : "🔴"}</li>
           <li className="hover:text-xl">
