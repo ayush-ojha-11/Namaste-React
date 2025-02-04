@@ -10,16 +10,12 @@ const RestaurantMenu = () => {
   // using a custom hook
   const resInfo = useRestaurantMenu(resId);
 
-  const [showItems, setShowItems] = useState(false);
   const [showIndex, setShowIndex] = useState(0);
 
   if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info;
-
-  const { itemCards } =
-    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
   const categories =
     resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -43,12 +39,10 @@ const RestaurantMenu = () => {
         <RestaurantCategory
           key={category?.card?.card?.categoryId}
           data={category?.card?.card}
-          showItems={index === showIndex ? showItems : false}
+          showItems={index === showIndex ? true : false}
           setShowIndex={() => {
             setShowIndex(index);
-            if (showItems === false) {
-              setShowItems(true);
-            } else setShowItems(false);
+            index === showIndex ? setShowIndex(null) : setShowIndex(index);
           }}
         />
       ))}
