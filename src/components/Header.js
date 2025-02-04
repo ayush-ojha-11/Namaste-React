@@ -40,7 +40,7 @@ const Header = () => {
             </Link>
           </li>
           <button
-            className="px-4 py-2 rounded-lg bg-blue-200 hover:bg-blue-400 font-bold"
+            className="px-4 py-2 rounded-lg bg-pink-200 hover:bg-pink-400 font-bold"
             onClick={() => {
               btn === "Login" ? setBtn("Logout") : setBtn("Login");
             }}
