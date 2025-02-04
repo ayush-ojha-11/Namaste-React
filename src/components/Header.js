@@ -5,36 +5,35 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btn, setBtn] = useState("Login");
-  const [menuIcon, setMenuIcon] = useState("menu-outline");
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between items-center w-[92%] mx-auto">
-      <div className="">
+    <div className="flex justify-between items-center p-4">
+      <div>
         <Link to={"/"}>
-          <img className="logo w-16 mix-blend-multiply" src={LOGO_URL} />
+          <img className="logo w-20 mix-blend-multiply" src={LOGO_URL} />
         </Link>
       </div>
 
-      <nav className="nav-links md:static md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-        <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 ">
+      <nav>
+        <ul className="flex items-center gap-10">
           <li className="">Online status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="hover:text-xl">
+          <li className="hover:text-gray-500">
             <Link className="link" to={"/"}>
               Home
             </Link>
           </li>
-          <li className="hover:text-xl">
+          <li className="hover:text-gray-500">
             <Link className="link" to={"/about"}>
               About us
             </Link>
           </li>
-          <li className="hover:text-xl">
+          <li className="hover:text-gray-500">
             <Link className="link" to={"/contact"}>
               Contact us
             </Link>
           </li>
-          <li className="hover:text-xl">
+          <li className="hover:text-gray-500">
             <Link className="link" to={"/grocery"}>
               Grocery
             </Link>
@@ -50,8 +49,8 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div className="text-3xl cursor-pointer md:hidden">
-        <ion-icon name={menuIcon} onClick={() => onToggleMenu()}></ion-icon>
+      <div className="text-2xl cursor-pointer md:hidden">
+        <i class="ri-menu-line"></i>
       </div>
     </div>
   );

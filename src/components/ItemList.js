@@ -22,7 +22,7 @@ const ItemList = ({ items }) => {
           <div className="w-3/12">
             <img
               src={CDN_URL + item.card.info.imageId}
-              className="w-auto  mix-blend-multiply"
+              className="w-auto"
             ></img>
           </div>
         </div>
