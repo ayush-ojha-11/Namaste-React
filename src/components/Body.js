@@ -39,7 +39,7 @@ const Body = () => {
   }
   return (
     <div className="body">
-      <div className="filter flex items-center text-center">
+      <div className="filter flex justify-center items-center">
         <div className="search m-4 p-4">
           <input
             type="text"
@@ -48,7 +48,7 @@ const Body = () => {
             onChange={(e) => setSearchText(e.target.value)}
           ></input>
           <button
-            className="py-2 px-4 rounded-lg bg-green-100 hover:cursor-pointer"
+            className="py-2 px-4 rounded-lg bg-pink-200 hover:bg-pink-300 hover:cursor-pointer"
             onClick={() => {
               // Filter the restaurants
               const searchFilteredList = listOfRestaurants.filter((res) =>
@@ -62,7 +62,7 @@ const Body = () => {
         </div>
         <div>
           <button
-            className="py-2 px-4 rounded-lg bg-gray-200 hover:cursor-pointer"
+            className="py-2 px-4 rounded-lg bg-blue-200 hover:cursor-pointer hover:bg-blue-300"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4
@@ -74,7 +74,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {filteredRestaurants.map((restaurant) => (
           <Link
             className="link"
