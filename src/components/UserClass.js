@@ -3,15 +3,12 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.name + " constructor");
-
     this.state = {
       count: 20,
     };
   }
 
   render() {
-    console.log(this.props.name + " render");
     return (
       <div className="user-card">
         <h1>Count : {this.state.count}</h1>
@@ -32,10 +29,7 @@ class UserClass extends React.Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => {
-      console.log("Interval");
-    }, 1000);
-    console.log(this.props.name + " mount");
+    this.interval = setInterval(() => {}, 1000);
   }
 
   componentWillUnmount() {

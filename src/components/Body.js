@@ -13,7 +13,6 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
-    console.log("Use effect executed!");
   }, []);
 
   const fetchData = async () => {
@@ -21,7 +20,6 @@ const Body = () => {
       "https://foodfire.onrender.com/api/restaurants?lat=28.6139&lng=77.2088&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle.restaurants
     );

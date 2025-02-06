@@ -6,11 +6,8 @@ class About extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    console.log("Parent Constructor");
   }
   render() {
-    console.log("Paren render");
-
     return (
       <div>
         <h1>Namaste-React Project 1</h1>
@@ -19,8 +16,6 @@ class About extends React.Component {
       </div>
     );
   }
-  componentDidMount() {
-    console.log("Parent Mount");
-  }
+  componentDidMount() {}
 }
 export default About;
