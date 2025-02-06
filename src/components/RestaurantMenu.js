@@ -26,7 +26,7 @@ const RestaurantMenu = () => {
 
   console.log("Categories ", categories);
 
-  return (
+  return categories ? (
     <div className="text-center">
       <h1 className="font-bold text-2xl my-5">{name}</h1>
       <p className="text-lg">
@@ -47,6 +47,8 @@ const RestaurantMenu = () => {
         />
       ))}
     </div>
+  ) : (
+    <h1>Error loading</h1>
   );
 };
 export default RestaurantMenu;
