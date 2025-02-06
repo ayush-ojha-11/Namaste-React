@@ -6,3 +6,5 @@ export const CDN_URL =
 
 export const MENU_URL =
   "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=";
+
+export const BASE_URL = "http://localhost:1000/";
