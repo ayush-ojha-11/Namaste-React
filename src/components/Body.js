@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { BASE_URL } from "../utils/constants";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -20,6 +21,7 @@ const Body = () => {
       "https://foodfire.onrender.com/api/restaurants?lat=28.6139&lng=77.2088&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle.restaurants
     );

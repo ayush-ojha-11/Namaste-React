@@ -19,9 +19,11 @@
     "util": "^0.12.5"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.5.1",
     "@tailwindcss/postcss": "^4.0.0",
     "node": "^22.13.0",
     "react": "^19.0.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.28.2"
   }
 }

@@ -1,11 +1,13 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btn, setBtn] = useState("Login");
   const onlineStatus = useOnlineStatus();
+  const data = useContext(UserContext);
 
   return (
     <div className="flex justify-between items-center p-4">
@@ -17,7 +19,7 @@ const Header = () => {
 
       <nav>
         <ul className="flex items-center gap-10">
-          <li className="">Online status: {onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="">Online: {onlineStatus ? "🟢" : "🔴"}</li>
           <li className="hover:text-gray-500">
             <Link className="link" to={"/"}>
               Home
