@@ -19,7 +19,6 @@ const Header = () => {
 
       <nav>
         <ul className="flex items-center gap-10">
-          <li className="">Online: {onlineStatus ? "🟢" : "🔴"}</li>
           <li className="hover:text-gray-500">
             <Link className="link" to={"/"}>
               Home

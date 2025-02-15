@@ -1,5 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 const ItemList = ({ items }) => {
+  function handleAddItem() {}
   return (
     <div>
       {items.map((item) => (
@@ -20,10 +21,13 @@ const ItemList = ({ items }) => {
           </div>
 
           <div className="w-3/12">
-            <img
-              src={CDN_URL + item.card.info.imageId}
-              className="w-auto"
-            ></img>
+            <img src={CDN_URL + item.card.info.imageId} className="w-auto" />
+            <button
+              className="rounded-lg cursor-pointer bg-amber-200 p-1 mt-1"
+              onClick={handleAddItem}
+            >
+              Add +
+            </button>
           </div>
         </div>
       ))}
