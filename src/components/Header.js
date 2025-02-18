@@ -1,13 +1,12 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState, useContext } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btn, setBtn] = useState("Login");
-  const onlineStatus = useOnlineStatus();
-  const data = useContext(UserContext);
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="flex justify-between items-center p-4">
@@ -20,24 +19,17 @@ const Header = () => {
       <nav>
         <ul className="flex items-center gap-10">
           <li className="hover:text-gray-500">
-            <Link className="link" to={"/"}>
-              Home
-            </Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li className="hover:text-gray-500">
-            <Link className="link" to={"/about"}>
-              About us
-            </Link>
+            <Link to={"/about"}>About us</Link>
           </li>
           <li className="hover:text-gray-500">
-            <Link className="link" to={"/contact"}>
-              Contact us
-            </Link>
+            <Link to={"/contact"}>Contact us</Link>
           </li>
-          <li className="hover:text-gray-500">
-            <Link className="link" to={"/grocery"}>
-              Grocery
-            </Link>
+
+          <li className="font-medium">
+            <Link to={"/cart"}>Cart - {cartItems.length}</Link>
           </li>
           <button
             className="px-4 py-2 rounded-lg bg-pink-200 hover:bg-pink-400 font-bold"
@@ -51,7 +43,7 @@ const Header = () => {
       </nav>
 
       <div className="text-2xl cursor-pointer md:hidden">
-        <i class="ri-menu-line"></i>
+        <i className="ri-menu-line"></i>
       </div>
     </div>
   );
