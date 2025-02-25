@@ -21,7 +21,6 @@ const ItemList = ({ items, isFromCart }) => {
                 - ₹ {item.card.info.price / 100}
               </span>
             </div>
-
             <p className="text-xs line-clamp-2">{item.card.info.description}</p>
           </div>
 
