@@ -29,7 +29,7 @@ const Header = () => {
           </li>
 
           <li className="font-medium">
-            <Link to={"/cart"}>Cart : {cartItems.length}</Link>
+            <Link to={"/cart"}>Cart - {cartItems.length}</Link>
           </li>
           <button
             className="px-4 py-2 rounded-lg bg-pink-200 hover:bg-pink-400 font-bold"
