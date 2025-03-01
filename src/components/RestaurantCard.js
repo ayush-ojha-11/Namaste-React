@@ -3,7 +3,7 @@ const RestaurantCard = (props) => {
   const { resData } = props;
   const { name, cuisines, avgRating, costForTwo } = resData?.info;
   return (
-    <div className="m-4 p-4 w-[200px] bg-white rounded-lg shadow-lg">
+    <div className="m-4 p-4 w-[200px] bg-white rounded-lg shadow-lg text-center">
       <img
         alt="res-pic"
         className="res-logo"
