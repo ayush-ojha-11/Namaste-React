@@ -28,7 +28,8 @@ const ItemList = ({ items, isFromCart }) => {
             <img src={CDN_URL + item.card.info.imageId} className="w-auto" />
             {!isFromCart && (
               <button
-                className="rounded-lg cursor-pointer bg-amber-200 p-1 mt-1"
+                className="rounded-lg bg-green-700 text-white p-2 mt-2"
+                type="button"
                 onClick={() => handleAddItem(item)}
               >
                 Add +

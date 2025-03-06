@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [btn, setBtn] = useState("Login");
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
 
@@ -12,12 +11,15 @@ const Header = () => {
     <div className="flex justify-between items-center p-4">
       <div>
         <Link to={"/"}>
-          <img className="logo w-20 mix-blend-multiply" src={LOGO_URL} />
+          <img
+            className="logo w-12 md:w-16 mix-blend-multiply"
+            src={LOGO_URL}
+          />
         </Link>
       </div>
 
       <nav>
-        <ul className="flex items-center gap-10">
+        <ul className="flex items-center gap-3 md:gap-10 text-s md:text-2xl">
           <li className="hover:text-gray-500">
             <Link to={"/"}>Home</Link>
           </li>
@@ -31,20 +33,8 @@ const Header = () => {
           <li className="font-medium">
             <Link to={"/cart"}>Cart - {cartItems.length}</Link>
           </li>
-          <button
-            className="px-4 py-2 rounded-lg bg-pink-200 hover:bg-pink-400 font-bold"
-            onClick={() => {
-              btn === "Login" ? setBtn("Logout") : setBtn("Login");
-            }}
-          >
-            {btn}
-          </button>
         </ul>
       </nav>
-
-      <div className="text-2xl cursor-pointer md:hidden">
-        <i className="ri-menu-line"></i>
-      </div>
     </div>
   );
 };
