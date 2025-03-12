@@ -36,7 +36,7 @@ This will start the development server and you can view the app in your browser 
 
 ## Live Demo
 
-Check out the live demo of the project [https://its-your-food.netlify.app/]
+Check out the live demo of the project [https://foodie-12.netlify.app/]
 
 ## Contributing
 
