@@ -19,7 +19,7 @@ const Header = () => {
       </div>
 
       <nav>
-        <ul className="flex items-center gap-3 md:gap-10 text-s md:text-2xl">
+        <ul className="flex items-center gap-3 md:gap-10 text-s md:text-xl">
           <li className="hover:text-gray-500">
             <Link to={"/"}>Home</Link>
           </li>
